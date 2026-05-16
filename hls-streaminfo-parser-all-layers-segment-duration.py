@@ -9,8 +9,9 @@ MASTER_MANIFEST_URLS = [
     "https://d13lu7nbt4by7g.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sangeet_bangla/sangeetbangla/master.m3u8",
 "https://d2pc7kx157en8h.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sangeet_bhojpuri/sangeetbhojhpuri/master.m3u8",
 "https://dw5w6ea1sg8un.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sangeet_marathi/sangeetmarathi/master.m3u8",
-"https://d2fr1pr3k53e7j.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/bollywood_tv/manifest.m3u8"
-]
+"https://d2fr1pr3k53e7j.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/bollywood_tv/manifest.m3u8",
+"https://d2fr1pr3k53e7j.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/bollywood_tv/manifest.m3u8",
+https://d2fr1pr3k53e7j.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/bollywood_tv/manifest.m3u8"
 
 # ==========================================
 # Fetch Manifest
