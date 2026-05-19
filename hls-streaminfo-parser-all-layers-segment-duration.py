@@ -7,40 +7,45 @@ import re
 # ==========================================
 MASTER_MANIFEST_URLS = [
     "https://d3ptspza8nzxps.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/itv_india_daily_news/indiadailylive/index.m3u8",
-"https://d2sqrjitisvn17.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/tara_tv/taratv/index.m3u8",
-"https://d88z77jazwrot.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/anand_tv/anandtv/index.m3u8",
-"https://d2qjmm8pp6modv.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/haryana_beats/haryanabeat/index.m3u8",
-"https://d28aw9z1v9dl52.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/news_malayalam_swiftv/newsmalayalamlive/index.m3u8",
-"https://dhschn7phghlj.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/punjabi_hits/punjabihits/index.m3u8",
-"https://d2c64wlzqq0ngq.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/rongeen_tv/rongeentv/index.m3u8",
-"https://d27p16vtqgequl.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/rplus/hls5/index.m3u8",
-"https://dd1587ggje2rn.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/lakshya_tv/distrolakshya/index.m3u8",
-"https://dat3ebe9q09hb.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/kalyan_tv/distrotvkalyantv/index.m3u8",
-"https://d3foatmq523jy6.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/kartvya_tv/distrotvkartavyatv/index.m3u8",
-"https://d1rjy43nstmb82.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/living_india/livingindia/index.m3u8",
-"https://d34ty5mrc8bxua.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/tabbar_hits/tabbarhits/index.m3u8",
-"https://d3i4nfibrjst21.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/news_tamil_swifttv/newstamil/index.m3u8",
-"https://d22euq38lyxy6x.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/pratidin_times/pratidin/index.m3u8",
-"https://d1vlbhvyvl59gv.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/munsif_tv/munsiftv/index.m3u8",
-"https://ddfiowhw29pcs.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/global_punjab/distroglobalpunjab/index.m3u8",
-"https://ds37poyi3xm8n.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/mahuaa_play/mahuaplayjio/index.m3u8",
-"https://d1yak0wyh733r.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/mahuaa_khabar/mahuakhabarjio/index.m3u8",
-"https://d1lxslxfgt5l3u.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/mahaa_news/mahaanews/index.m3u8",
-"https://d23babkhkiy0fk.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/mahaa_maxx/mahaamaxx/index.m3u8",
-"https://dk6cuki64nihv.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sandesh_news/sandeshnews/index.m3u8",
-"https://d13f1k5bcoch3z.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/abn_andhrajyoti/abnandhrajyothycdn/index.m3u8",
-"https://d1rzdclb147bs.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/kolkata_tv/kolkatatv/index.m3u8",
-"https://d3esntc4thfeda.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sakshi_tv/sakshitv/index.m3u8",
-"https://d2uk2hcw7n1tv9.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/big_tv/bigtv/index.m3u8",
-"https://d19jglf6lo77w6.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/gujarat_first/gujaratfirst/index.m3u8"
+    "https://d2sqrjitisvn17.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/tara_tv/taratv/index.m3u8"
 ]
+
 # ==========================================
 # Fetch Manifest
 # ==========================================
 def fetch_manifest(url):
-    response = requests.get(url, timeout=10)
+
+    response = requests.get(url, timeout=15)
+
     response.raise_for_status()
+
     return response.text
+
+# ==========================================
+# Extract Attribute Helper
+# ==========================================
+def extract_attribute(line, attribute):
+
+    match = re.search(
+        rf'{attribute}=("[^"]+"|[^,]+)',
+        line
+    )
+
+    if match:
+        return match.group(1).replace('"', '')
+
+    return "N/A"
+
+# ==========================================
+# Convert Bandwidth to Mbps
+# ==========================================
+def bandwidth_to_mbps(value):
+
+    try:
+        return f"{round(int(value) / 1000000, 2)} Mbps"
+
+    except:
+        return value
 
 # ==========================================
 # Parse Master Manifest
@@ -53,33 +58,52 @@ def parse_master_manifest(master_content, master_url):
 
     for i, line in enumerate(lines):
 
-        if "#EXT-X-STREAM-INF" in line:
+        if line.startswith("#EXT-X-STREAM-INF"):
 
-            # Resolution
-            resolution_match = re.search(
-                r'RESOLUTION=(\d+x\d+)',
-                line
-            )
+            stream_info = {
 
-            resolution = (
-                resolution_match.group(1)
-                if resolution_match
-                else "Unknown"
-            )
+                "resolution": extract_attribute(
+                    line,
+                    "RESOLUTION"
+                ),
 
-            # Bandwidth
-            bandwidth_match = re.search(
-                r'BANDWIDTH=(\d+)',
-                line
-            )
+                "bandwidth": extract_attribute(
+                    line,
+                    "BANDWIDTH"
+                ),
 
-            bandwidth = (
-                bandwidth_match.group(1)
-                if bandwidth_match
-                else "Unknown"
-            )
+                "average_bandwidth": extract_attribute(
+                    line,
+                    "AVERAGE-BANDWIDTH"
+                ),
 
-            # Child Manifest
+                "frame_rate": extract_attribute(
+                    line,
+                    "FRAME-RATE"
+                ),
+
+                "codecs": extract_attribute(
+                    line,
+                    "CODECS"
+                ),
+
+                "audio": extract_attribute(
+                    line,
+                    "AUDIO"
+                ),
+
+                "subtitles": extract_attribute(
+                    line,
+                    "SUBTITLES"
+                ),
+
+                "closed_captions": extract_attribute(
+                    line,
+                    "CLOSED-CAPTIONS"
+                )
+            }
+
+            # Child Manifest URL
             if i + 1 < len(lines):
 
                 child_manifest = lines[i + 1].strip()
@@ -89,11 +113,9 @@ def parse_master_manifest(master_content, master_url):
                     child_manifest
                 )
 
-                streams.append({
-                    "resolution": resolution,
-                    "bandwidth": bandwidth,
-                    "manifest_url": child_manifest_url
-                })
+                stream_info["manifest_url"] = child_manifest_url
+
+                streams.append(stream_info)
 
     return streams
 
@@ -106,52 +128,90 @@ def parse_child_manifest(child_url):
 
     lines = child_content.splitlines()
 
-    segment_duration = "Not Found"
-    first_segment = "Not Found"
+    data = {
 
-    for i, line in enumerate(lines):
+        "segment_duration": "N/A",
+        "target_duration": "N/A",
+        "media_sequence": "N/A",
+        "playlist_type": "LIVE",
+        "version": "N/A",
+        "total_segments": 0
+    }
+
+    # Manifest Level Info
+    for line in lines:
+
+        if line.startswith("#EXT-X-TARGETDURATION"):
+            data["target_duration"] = line.split(":")[1]
+
+        elif line.startswith("#EXT-X-MEDIA-SEQUENCE"):
+            data["media_sequence"] = line.split(":")[1]
+
+        elif line.startswith("#EXT-X-PLAYLIST-TYPE"):
+            data["playlist_type"] = line.split(":")[1]
+
+        elif line.startswith("#EXT-X-VERSION"):
+            data["version"] = line.split(":")[1]
+
+        elif line.startswith("#EXTINF"):
+            data["total_segments"] += 1
+
+    # Segment Duration
+    for line in lines:
 
         if line.startswith("#EXTINF"):
 
             try:
+
                 duration_part = line.split(":")[1]
 
-                # Extract only number
                 match = re.search(
                     r'(\d+(\.\d+)?)',
                     duration_part
                 )
 
                 if match:
-                    segment_duration = match.group(1)
-
-                # Get first segment
-                for j in range(i + 1, len(lines)):
-
-                    next_line = lines[j].strip()
-
-                    if next_line and not next_line.startswith("#"):
-                        first_segment = next_line
-                        break
+                    data["segment_duration"] = match.group(1)
 
                 break
 
             except:
                 pass
 
-    return segment_duration, first_segment
+    return data
+
+# ==========================================
+# Pretty Print Header
+# ==========================================
+def print_header(title):
+
+    print("\n" + "═" * 120)
+    print(f"{title.center(120)}")
+    print("═" * 120)
+
+# ==========================================
+# Pretty Print Key/Value
+# ==========================================
+def print_kv(key, value):
+
+    print(f"{key:<28}: {value}")
 
 # ==========================================
 # Main Logic
 # ==========================================
 def main():
 
-    print("\n===== HLS VIDEO LAYER ANALYSIS =====\n")
+    print_header("HLS MASTER MANIFEST ANALYZER")
 
     for master_url in MASTER_MANIFEST_URLS:
 
-        print("=" * 100)
-        print(f"\nMASTER MANIFEST : {master_url}\n")
+        print("\n")
+        print("▓" * 120)
+
+        print("\nMASTER MANIFEST URL")
+        print("-" * 120)
+
+        print(master_url)
 
         try:
 
@@ -163,60 +223,174 @@ def main():
             )
 
             if not streams:
-                print("No video layers found!\n")
+
+                print("\n❌ No video layers found.\n")
+
                 continue
 
-            total_layers = len(streams)
+            print(f"\n✅ Total Video Layers Found : {len(streams)}")
+
+            print("\n")
 
             all_durations = []
 
+            # ==========================================
+            # Per Layer Analysis
+            # ==========================================
             for idx, stream in enumerate(streams, start=1):
+
+                print("┌" + "─" * 118 + "┐")
+
+                print(
+                    f"│ VIDEO LAYER {idx}".ljust(119)
+                    + "│"
+                )
+
+                print("├" + "─" * 118 + "┤")
 
                 try:
 
-                    duration, segment = parse_child_manifest(
+                    child_data = parse_child_manifest(
                         stream['manifest_url']
                     )
 
-                    all_durations.append(duration)
+                    all_durations.append(
+                        child_data['segment_duration']
+                    )
 
-                    print(f"Layer {idx}")
-                    print(f"Resolution       : {stream['resolution']}")
-                    print(f"Bandwidth        : {stream['bandwidth']}")
-                    print(f"Child Manifest   : {stream['manifest_url']}")
-                    print(f"1st Segment      : {segment}")
-                    print(f"Segment Duration : {duration} sec")
-                    print("-" * 100)
+                    # ==========================================
+                    # Video Information
+                    # ==========================================
+                    print("\n🎥 VIDEO INFORMATION")
+                    print("-" * 40)
+
+                    print_kv(
+                        "Resolution",
+                        stream['resolution']
+                    )
+
+                    print_kv(
+                        "Frame Rate",
+                        f"{stream['frame_rate']} fps"
+                    )
+
+                    print_kv(
+                        "CODECS",
+                        stream['codecs']
+                    )
+
+                    print_kv(
+                        "Bandwidth",
+                        f"{stream['bandwidth']} "
+                        f"({bandwidth_to_mbps(stream['bandwidth'])})"
+                    )
+
+                    print_kv(
+                        "Average Bandwidth",
+                        f"{stream['average_bandwidth']} "
+                        f"({bandwidth_to_mbps(stream['average_bandwidth'])})"
+                    )
+
+                    # ==========================================
+                    # Audio/Subtitles
+                    # ==========================================
+                    print("\n🔊 AUDIO / SUBTITLE INFORMATION")
+                    print("-" * 40)
+
+                    print_kv(
+                        "Audio Group",
+                        stream['audio']
+                    )
+
+                    print_kv(
+                        "Subtitles",
+                        stream['subtitles']
+                    )
+
+                    print_kv(
+                        "Closed Captions",
+                        stream['closed_captions']
+                    )
+
+                    # ==========================================
+                    # Child Manifest
+                    # ==========================================
+                    print("\n📄 CHILD MANIFEST")
+                    print("-" * 40)
+
+                    print_kv(
+                        "Manifest URL",
+                        stream['manifest_url']
+                    )
+
+                    print_kv(
+                        "Playlist Type",
+                        child_data['playlist_type']
+                    )
+
+                    print_kv(
+                        "HLS Version",
+                        child_data['version']
+                    )
+
+                    print_kv(
+                        "Target Duration",
+                        f"{child_data['target_duration']} sec"
+                    )
+
+                    print_kv(
+                        "Segment Duration",
+                        f"{child_data['segment_duration']} sec"
+                    )
+
+                    print_kv(
+                        "Media Sequence",
+                        child_data['media_sequence']
+                    )
+
+                    print_kv(
+                        "Total Segments",
+                        child_data['total_segments']
+                    )
 
                 except Exception as e:
 
-                    print(f"Error parsing child manifest:")
-                    print(stream['manifest_url'])
+                    print(f"\n❌ Error parsing child manifest")
                     print(f"Error : {e}")
-                    print("-" * 100)
+
+                print("\n└" + "─" * 118 + "┘\n")
 
             # ==========================================
             # Final Summary
             # ==========================================
+            print("\n")
+            print("█" * 120)
 
-            print("\nFINAL SUMMARY")
-            print("-" * 100)
+            print("\n📊 FINAL SUMMARY")
+            print("-" * 120)
 
-            print(f"Total Video Layers : {total_layers}")
+            print_kv(
+                "Total Video Layers",
+                len(streams)
+            )
 
-            print("Segment Durations  : "
-                  f"{', '.join([str(x) + ' sec' for x in all_durations])}")
+            print_kv(
+                "Segment Durations",
+                ", ".join(
+                    [str(x) + " sec" for x in all_durations]
+                )
+            )
 
-            print("=" * 100)
+            print("█" * 120)
 
         except Exception as e:
 
-            print(f"Error fetching master manifest:")
-            print(master_url)
+            print(f"\n❌ Error fetching master manifest")
             print(f"Error : {e}")
 
 # ==========================================
 # Execute Script
 # ==========================================
 if __name__ == "__main__":
+
     main()
