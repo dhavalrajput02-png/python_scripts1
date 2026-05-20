@@ -9,7 +9,6 @@ MASTER_MANIFEST_URLS = [
     "https://d3ptspza8nzxps.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/itv_india_daily_news/indiadailylive/index.m3u8",
 "https://d2sqrjitisvn17.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/tara_tv/taratv/index.m3u8",
 "https://d88z77jazwrot.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/anand_tv/anandtv/index.m3u8",
-"https://d2qjmm8pp6modv.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/haryana_beats/haryanabeat/index.m3u8",
 "https://d28aw9z1v9dl52.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/news_malayalam_swiftv/newsmalayalamlive/index.m3u8",
 "https://dhschn7phghlj.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/punjabi_hits/punjabihits/index.m3u8",
 "https://d2c64wlzqq0ngq.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/rongeen_tv/rongeentv/index.m3u8",
@@ -31,7 +30,12 @@ MASTER_MANIFEST_URLS = [
 "https://d13f1k5bcoch3z.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/abn_andhrajyoti/abnandhrajyothycdn/index.m3u8",
 "https://d1rzdclb147bs.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/kolkata_tv/kolkatatv/index.m3u8",
 "https://d3esntc4thfeda.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/sakshi_tv/sakshitv/index.m3u8",
-"https://d2uk2hcw7n1tv9.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/big_tv/bigtv/index.m3u8"
+"https://d2uk2hcw7n1tv9.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/big_tv/bigtv/index.m3u8",
+"https://d19jglf6lo77w6.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/gujarat_first/gujaratfirst/index.m3u8",
+"https://d1ccivq5jregbg.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/bharat_express/index.m3u8",
+"https://d1nolnrj809zgb.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/4sides_tv/index.m3u8",
+"https://d1318zci75rg9m.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/argus/index.m3u8",
+"https://dxfgoc6ixmml.cloudfront.net/v1/master/071c0467fcd02420cdf0d8a1ca3524b96c27a151/rplus_gold/index.m3u8"
 ]
 
 # ==========================================
